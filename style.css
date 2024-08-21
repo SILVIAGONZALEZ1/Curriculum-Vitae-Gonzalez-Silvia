@@ -1,48 +1,59 @@
-/* Reseteo básico de estilos */
+/* Reseteo básico para quitar márgenes y padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos generales del body */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #E2B4BD; /* Fondo general */
+    color: #424B54; /* Color del texto principal */
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
+/* Estilos del header */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #424B54; /* Color del header */
+    padding: 20px;
     text-align: center;
 }
 
 header nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
 }
 
 header nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #FFFFFF; /* Color de los enlaces del menú */
     text-decoration: none;
     font-weight: bold;
 }
 
+header nav ul li a:hover {
+    color: #E2B4BD; /* Color de los enlaces al pasar el mouse */
+}
+
+/* Estilos del main */
 main {
-    padding: 20px;
-    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 main h1 {
+    color: #9B6A6C; /* Color del título principal */
+    margin-bottom: 20px;
     font-size: 2.5em;
-    margin-bottom: 10px;
+}
+
+main h1 strong {
+    color: #424B54; /* Resaltado del título */
 }
 
 main p {
@@ -50,35 +61,68 @@ main p {
     margin-bottom: 20px;
 }
 
-.botones a {
+main .botones a {
     display: inline-block;
-    margin: 10px 15px;
+    background-color: #9B6A6C; /* Color de los botones */
+    color: #FFFFFF;
     padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
-    border-radius: 5px;
+    margin: 10px 5px;
     text-decoration: none;
+    border-radius: 5px;
 }
 
-.botones a:hover {
-    background-color: #0056b3;
+main .botones a:hover {
+    background-color: #424B54; /* Color de los botones al pasar el mouse */
 }
 
-img {
+/* Estilo de la imagen */
+main img {
     max-width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-top: 20px;
 }
 
+/* Estilos del footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #424B54; /* Color del footer */
+    color: #FFFFFF; /* Color del texto en el footer */
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.9em;
 }
 
 footer p {
     margin: 0;
+}
+
+footer a {
+    color: #93A8AC; /* Color de los enlaces en el footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #E2B4BD; /* Color de los enlaces en el footer al pasar el mouse */
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.theme-button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.theme-button:hover {
+    background-color: #0056b3;
 }
